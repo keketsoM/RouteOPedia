@@ -2,6 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import About from "./About";
+import CryptoDetail from "./CryptoDetail";
 import Headers from "./Header";
 import Home from "./Home";
 import NotFound from "./NotFound";
@@ -17,9 +18,12 @@ root.render(
     <Routes>
       <Route path="/" element={<Home />}></Route>
       <Route path="/about" element={<About />}></Route>
+      <Route path="/cryptodetail/:cryptoSymbol/:id" element={<CryptoDetail />}></Route>
+      <Route path="/cryptodetail" element={<CryptoDetail />}></Route> 
       <Route path="/product">
         <Route path="" element={<Product />}></Route>
         <Route path="detail" element={<ProductDetail />}></Route>
+        <Route path="detail/:id" element={<ProductDetail/>}></Route>
         <Route path="list" element={<ProductList />}></Route>
         <Route path="create" element={<CreateProduct />}></Route>
       </Route>
