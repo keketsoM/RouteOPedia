@@ -39,7 +39,7 @@ const Header = () => {
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
               >
-                Dropdown
+                Product
               </a>
               <ul className="dropdown-menu">
                 <li>
@@ -48,18 +48,18 @@ const Header = () => {
                   </Link>
                 </li>
                 <li>
-                  <Link className="dropdown-item" to="/createproduct">
+                  <Link className="dropdown-item" to="/product/create">
                     Create Product
                   </Link>
                 </li>
 
                 <li>
-                  <Link className="dropdown-item" to="/productdetail">
+                  <Link className="dropdown-item" to="/product/detail">
                     Product Detail
                   </Link>
                 </li>
                 <li>
-                  <Link className="dropdown-item" to="/productlist">
+                  <Link className="dropdown-item" to="/product/list">
                     Product List
                   </Link>
                 </li>

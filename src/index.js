@@ -16,10 +16,12 @@ root.render(
     <Routes>
       <Route path="/" element={<Home />}></Route>
       <Route path="/about" element={<About />}></Route>
-      <Route path="/product" element={<Product />}></Route>
-      <Route path="/productdetail" element={<ProductDetail />}></Route>
-      <Route path="/productlist" element={<ProductList />}></Route>
-      <Route path="/createproduct" element={<CreateProduct />}></Route>
+      <Route path="/product">
+        <Route path="" element={<Product />}></Route>
+        <Route path="detail" element={<ProductDetail />}></Route>
+        <Route path="list" element={<ProductList />}></Route>
+        <Route path="create" element={<CreateProduct />}></Route>
+      </Route>
     </Routes>
   </BrowserRouter>
 );
