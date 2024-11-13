@@ -4,6 +4,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import About from "./About";
 import Headers from "./Header";
 import Home from "./Home";
+import NotFound from "./NotFound";
 import CreateProduct from "./Pages/CreateProduct";
 import Product from "./Pages/Product";
 import ProductDetail from "./Pages/ProductDetail";
@@ -22,6 +23,7 @@ root.render(
         <Route path="list" element={<ProductList />}></Route>
         <Route path="create" element={<CreateProduct />}></Route>
       </Route>
+      <Route path="*" element={<NotFound />}></Route>
     </Routes>
   </BrowserRouter>
 );
