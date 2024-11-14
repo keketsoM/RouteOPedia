@@ -1,7 +1,7 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 const Product = () => {
-  const  navigate  = useNavigate();
+  const navigate = useNavigate();
   return (
     <div>
       Product
@@ -11,8 +11,12 @@ const Product = () => {
           navigate("/product/create");
         }}
       >
-        Go to Product
+        Create Product
       </button>
+      <br />
+      <Link to={"/product/create"}>
+        <button>Create Product</button>
+      </Link>
     </div>
   );
 };
