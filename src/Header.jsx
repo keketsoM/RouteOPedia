@@ -1,13 +1,13 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import logo from "./logo192.png";
 const Header = () => {
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
       <div className="container-fluid">
-        <a className="navbar-brand" href="#">
+        <NavLink className="navbar-brand" href="#">
           <img src={logo} alt="React" height="36px"></img>
-        </a>
+        </NavLink>
         <button
           className="navbar-toggler"
           type="button"
@@ -22,17 +22,29 @@ const Header = () => {
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
             <li className="nav-item">
-              <Link className="nav-link active" aria-current="page" to="/">
+              <NavLink
+                className={({ isActive }) =>
+                  isActive ? "nav-link active text-danger" : "nav-link"
+                }
+                aria-current="page"
+                to="/"
+              >
                 Home
-              </Link>
+              </NavLink>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/about">
+              <NavLink
+                className={({ isActive }) =>
+                  isActive ? "nav-link active text-danger" : "nav-link"
+                }
+                aria-current="page"
+                to="/about"
+              >
                 About
-              </Link>
+              </NavLink>
             </li>
             <li className="nav-item dropdown">
-              <a
+              <NavLink
                 className="nav-link dropdown-toggle"
                 href="#"
                 role="button"
@@ -40,7 +52,7 @@ const Header = () => {
                 aria-expanded="false"
               >
                 Product
-              </a>
+              </NavLink>
               <ul className="dropdown-menu">
                 <li>
                   <Link className="dropdown-item" to="/product">
@@ -66,9 +78,9 @@ const Header = () => {
               </ul>
             </li>
             <li className="nav-item">
-              <a className="nav-link disabled" aria-disabled="true">
+              <NavLink className="nav-link disabled" aria-disabled="true">
                 Disabled
-              </a>
+              </NavLink>
             </li>
           </ul>
         </div>
